@@ -13,8 +13,11 @@ def index(title='Приветствие'):
 def training(prof=''):
     return render_template('training.html', prof=prof)
 
-@app.route('/odd_even')
-def odd_even():
-    return render_template('odd_even.html', number=2)
+@app.route('/list_prof/<list>')
+def list_prof(list):
+    items = ['Врач', 'Метеоролог', 'Строитель', 'Инженер', 'Пилот', 'Диспетчер дронов', 'Штурман']
+    return render_template('list_prof.html', list=list, items=items)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
