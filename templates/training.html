@@ -1,0 +1,17 @@
+<!doctype html>
+<hnml>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <h1>Миссия Колонизация Марса</h1>
+    <h4>И на Марсе будут яблони цвести!</h4>
+{% if 'строитель' in  prof or 'инженер' in  prof %}
+    <h2>Инженерные тренажеры</h2>
+    <img src="\static\img\ingener_training.png">
+{% else %}
+    <h2>Научные симуляторы</h2>
+    <img src="\static\img\science_simulate.png">
+{% endif %}
+    </body>
+</hnml>
