@@ -37,5 +37,12 @@ def answer():
     }
     return render_template('auto_answer.html', **params)
 
+
+@app.route('/distribution')
+def distribution():
+    ausrtonauts = ['Стивен Спилберг', "Джордж Лукас", "Ридли Скотт", "Кристофер Нолан", "Дени Вильнёв"]
+    return render_template('distribution.html', ausrtonauts=ausrtonauts)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
