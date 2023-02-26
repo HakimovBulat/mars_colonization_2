@@ -13,6 +13,7 @@ def index(title='Приветствие'):
 def training(prof=''):
     return render_template('training.html', prof=prof)
 
+
 @app.route('/list_prof/<list>')
 def list_prof(list):
     items = ['Врач', 'Метеоролог', 'Строитель', 'Инженер', 'Пилот', 'Диспетчер дронов', 'Штурман']
