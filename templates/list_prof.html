@@ -1,12 +1,5 @@
-<!doctype html>
-<hnml>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-    <h1>Миссия Колонизация Марса</h1>
-    <h4>И на Марсе будут яблони цвести!</h4>
-    <h2>Список профессий</h2>
+{% extends 'base.html' %}
+{% block content %}
     {% if list == 'ol' %}
         <ol>
             {% for item in items %}
@@ -22,5 +15,4 @@
     {% else %}
         <div>Вы что-то перепутали в аргументе списка</div>
     {% endif %}
-    </body>
-</hnml>
+{% endblock %}
