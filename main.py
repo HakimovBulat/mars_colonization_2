@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect
 from loginform import LoginForm
 
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
@@ -45,6 +46,7 @@ def distribution():
     ausrtonauts = ['Стивен Спилберг', "Джордж Лукас", "Ридли Скотт", "Кристофер Нолан", "Дени Вильнёв"]
     return render_template('distribution.html', ausrtonauts=ausrtonauts)
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -56,6 +58,11 @@ def login():
 @app.route('/success')
 def success():
     return render_template('success.html', title='Доступ разрешён')
+
+
+@app.route('/table/<string:sex>/<int:age>')
+def table(sex, age):
+    return render_template('table.html', title='Каюта', sex=sex, age=age)
 
 
 if __name__ == '__main__':

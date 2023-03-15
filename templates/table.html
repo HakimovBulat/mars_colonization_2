@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Оформление каюты</h2>
+<table border="2">
+    <tr>
+        <th> Цвет стен </th>
+        <th> Эмблема </th>
+    </tr>
+
+    <tr>
+        {% if sex == 'female' %}
+            <td height="100" width="50%" bgcolor="red">  </td>
+        {% else %}
+            <td height="100" width="50%" bgcolor="blue">  </td>
+        {% endif %}
+        
+        {% if age > 21 %}
+        <td> <img src="\static\img\alien_adult.webp"></td>
+        {% else %}
+        <td> <img src="\static\img\alien_child.png"></td>
+        {% endif %}
+    </tr>
+</table>
+{% endblock %}
