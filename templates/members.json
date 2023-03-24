@@ -1,0 +1,26 @@
+[
+{
+    "name": "Ridley",
+    "surname": "Scott",
+    "photo": "/static/img/scott.webp",
+    "speciality": ["research engineer", "captain of ship"]
+},
+{
+    "name": "James",
+    "surname": "Cameron",
+    "photo": "/static/img/cameron.webp",
+    "speciality": ["engineer", "machine scientist"]
+},
+{
+    "name": "George",
+    "surname": "Lucas",
+    "photo": "/static/img/lucas.webp",
+    "speciality": ["biology teacher", "doctor"]
+},
+{
+    "name": "Denis",
+    "surname": "Villeneuve",
+    "photo": "/static/img/denis.webp",
+    "speciality": ["cooker"]
+}
+]

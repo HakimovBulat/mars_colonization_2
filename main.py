@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect
 from loginform import LoginForm
-
+import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -64,6 +64,12 @@ def success():
 def table(sex, age):
     return render_template('table.html', title='Каюта', sex=sex, age=age)
 
+@app.route('/members')
+def members():
+    with open('templates\members.json') as file:
+        f = file.read()
+        members = json.loads(f)
+    return render_template('members.html', members=members)
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')

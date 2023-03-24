@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% set member = members|random() %} 
+  <div class="container text-center">
+      <h3>{{ member['name'] }} {{ member['surname']}}</h3> <br>
+      <img width='400' height="300" src={{ member["photo"] }}> <br>
+      <p> {{ member["speciality"]|sort()|join(', ')|capitalize() }} </p>
+  </div>
+{% endblock %}
